@@ -2,6 +2,9 @@ import subprocess
 import socket
 import os
 
+subprocess.run(["pip install socket"], shell=True)
+subprocess.run(["pip install os"], shell=True)
+
 s = socket.socket()
 host = "192.168.2.33"
 port = 9999
