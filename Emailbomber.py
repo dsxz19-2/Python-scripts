@@ -11,8 +11,9 @@ print("""
 | ██     ▄█ ██    ██    ██ ██   ██   ██    ██       ██    ▄███▄   ▄██ ██    ██    ██   ██▄   ▄██ ██▄    ▄ ██     |
 |▄██████████████  ████  ████▄████▀██▄████▄▄████▄   ▄████████  ▀█████▀▄████  ████  ████▄ █▀█████▀   ▀█████▀████▄  |                     
 +----------------------------------------------------------------------------------------------------------------+
-By DSXZ19
-Copywrite DSXZ19
+By dsxz19-2
+Copywrite dsxz19-2
+
 For this to work you need to allow less secure apps to send emails: https://bit.ly/3yn1d9v
 """)
 sender_email = input(str("[+] Enter your email here: "))
