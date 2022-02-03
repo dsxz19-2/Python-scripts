@@ -8,7 +8,7 @@ import pickle
 import struct
 
 
-HOST = sys.argv[1] if len(sys.argv) > 1 else '192.168.2.155'
+HOST = sys.argv[1] if len(sys.argv) > 1 else '192.168.56.1'
 PORT = int(sys.argv[2] if len(sys.argv) > 2 else 8080)
 
 s = socket.socket()
