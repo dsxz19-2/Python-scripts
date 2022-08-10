@@ -17,10 +17,10 @@ Copywrite dsxz19-2
 -me
 P.S Your going to need a powerful computer
 """)
-num = int(input("[+] Enter a number: "))
+num = 295147905179352825856
 
 def calculate(num):
-   while(2>1):
+   while True:
       try:
          if (num % 2) == 0:
             num = num/2
@@ -34,9 +34,7 @@ def calculate(num):
       except:
          pass
 
-sleep = int(input("[+] How muck time do you want spent between calculations: "))
-
-while 2>1:
+while True:
    print("\n[+] Calculating for " + str(num))
    calculate(num)
    time.sleep(sleep)
